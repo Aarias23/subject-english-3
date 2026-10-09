@@ -30,3 +30,4 @@ let spoken;context.window.SpeechSynthesisUtterance=context.SpeechSynthesisUttera
 audio['#listen-play'].onclick();assert.equal(spoken.rate,.85);assert.match(spoken.text,/eleventh grade/);spoken.onend();assert.match(audio['#audio-status'].textContent,/Finished/);audio['#listen-stop'].onclick();assert.match(audio['#audio-status'].textContent,/Stopped/);
 for(const s of context.window.english3Scenarios){assert.ok(s.answer>=0&&s.answer<s.options.length);assert.ok(s.explanation);}
 console.log('PASS: 37 slides, both modules, quiz answer keys, local assets, pathway success/retry/removal/reset, vocabulary reveals, audio fallback/play/stop.');
+
