@@ -55,3 +55,79 @@ blockquote{margin:24px 0;padding:0 0 0 24px;border-left:6px solid currentColor;f
 @media print{.slide-stage{overflow:visible;background:inherit!important;color:#0a2646!important;box-shadow:none}.hero-art{position:relative;height:260px;width:100%}.slide-stage.cover{padding-right:46px}.chapter-number{display:none}}
 
 .assignment-link{text-decoration:none;align-items:center;justify-content:center}
+
+/* Additional grammar section entry point. */
+.cover-links a{display:inline-flex;align-items:center;padding:13px 18px;background:#dcefc8;border-radius:3px;color:#0a2646;font-weight:750;font-size:1rem;text-decoration:none}.cover-links a:hover{background:#c4e2a7}.grammar-link{white-space:nowrap}
+
+@media(min-width:721px){.top-actions{flex-wrap:wrap}.topbar{column-gap:16px}}
+
+/* Let the header determine the remaining viewport height at every text size. */
+@media screen {
+  body { height:100vh; height:100dvh; display:flex; flex-direction:column; }
+  .topbar { flex:0 0 auto; min-height:0; grid-template-columns:minmax(0,1fr) auto; gap:12px; }
+  .class-meta { display:none; }
+  .brand,.brand>span:last-child,.top-actions { min-width:0; }
+  .brand-mark { flex-shrink:0; }
+  .top-actions { flex-wrap:wrap; max-width:100%; }
+  .top-actions .tool-button,.top-actions .icon-button { min-height:44px; }
+  .deck-shell { position:relative; flex:1 1 0; height:auto; min-height:0; width:100%; }
+  .teacher-panel { position:absolute; top:0; max-height:100%; display:flex; flex-direction:column; }
+  .teacher-panel header { flex-shrink:0; }
+  .teacher-content { flex:1; min-height:0; height:auto; overflow-y:auto; overflow-wrap:anywhere; }
+  .slide-rail { max-width:100%; }
+  .slide-stage.cover,.slide-stage.chapter { min-height:0; overflow-y:auto; }
+  .slide-kicker { flex-wrap:wrap; white-space:normal!important; }
+  .spread,.comparison-board,.timetable { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .school-path,.year-strip { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .vocab-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .spread>div,.comparison-board>div,.school-path>div,.year-strip>div,.dialogue span { min-width:0; }
+  .timetable>div,.exercise-actions,.audio-station { flex-wrap:wrap; }
+  .quiz-options button,.scenario-options button { min-width:0; overflow-wrap:anywhere; }
+  .cover-links>* { max-width:100%; overflow-wrap:anywhere; }
+  textarea { max-width:100%; resize:vertical; }
+  .timer-dialog { max-height:calc(100dvh - 24px); overflow-y:auto; padding:clamp(16px,4vw,28px); }
+  .timer-presets,.timer-actions { flex-wrap:wrap; }
+  .board-topbar { grid-template-columns:minmax(0,1fr) auto; }
+  .board-actions,.board-history { flex-wrap:wrap; }
+  .board-main { min-width:0; }
+  .board-toolbar { overflow-y:auto; }
+}
+@media screen and (max-width:1100px) {
+  .topbar { grid-template-columns:minmax(0,1fr); }
+  .top-actions { justify-content:flex-start; }
+  .school-path,.year-strip,.vocab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .slide-stage.cover { padding-right:32px; }
+  .hero-art { position:relative; width:100%; height:clamp(180px,30vw,320px); margin-top:24px; }
+  .hero-art img { display:block; }
+  .hero-art span { max-width:calc(100% - 30px); }
+}
+@media screen and (max-width:720px) {
+  .deck-shell { position:relative; }
+  .slide-rail { position:absolute; top:0; bottom:0; }
+  .slide-stage.cover { padding:24px 22px; }
+  .spread,.comparison-board,.timetable,.vocab-grid { grid-template-columns:minmax(0,1fr); }
+  .top-actions #board-open { display:inline-flex; }
+  .top-actions .icon-button { width:44px; }
+  .cover h1,.intro h1,.cover:not(.intro) h2 { font-size:clamp(2rem,8vw,3.6rem); }
+  .chapter h2 { font-size:clamp(2rem,7vw,3rem); }
+  .board-topbar { grid-template-columns:minmax(0,1fr); padding:8px; gap:8px; }
+  .board-title { display:none; }
+  .board-history { order:0; grid-column:auto; }
+  .board-actions,.board-history { justify-content:center; }
+  .board-topbar button { min-height:44px; }
+}
+@media screen and (max-width:400px) {
+  .topbar { padding:10px 12px; }
+  .slide-stage,.slide-stage.cover { padding:20px 16px; }
+  .school-path,.year-strip { grid-template-columns:minmax(0,1fr); }
+  .timetable>div { gap:8px; }
+  .timetable small { flex-basis:100%; margin-left:0; }
+  .audio-station label { display:flex; flex-wrap:wrap; }
+}
+@media screen and (max-height:500px) {
+  body { height:auto; min-height:100dvh; overflow-y:auto; }
+  .deck-shell { flex:none; min-height:400px; }
+  .stage-area { height:auto; }
+  .slide-stage { flex:none; max-height:65dvh; }
+  .slide-rail,.teacher-panel { position:fixed; top:0; bottom:0; }
+}

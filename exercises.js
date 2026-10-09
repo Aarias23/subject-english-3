@@ -59,4 +59,3 @@ window.bindEnglish3 = function(stage) {
     scenario.querySelector('#scenario-next').onclick=()=>{current=(current+1)%4;paint();};
   }paint();}
 };
-
