@@ -49,6 +49,13 @@ Imagen de apertura: `assets/student-introductions.jpg`, creada con la herramient
 
 `countable-nouns.html` is a 12-slide English-only presentation. Open Nouns in the toolbar or Noun lab on the thematic cover. It covers singular/plural nouns, uncountable meanings, portion units, some/any, much/many, a few/a little and context-dependent meanings. Includes six classification items, six explained practice questions, teacher notes and a café role-play. Navigate with the slide index, Previous/Next or arrow keys outside interactive controls. Answers remain while moving between slides and reset on reload or Restart both activities. Query parameters are zero-based, e.g. `?slide=9` opens classification. `countable-nouns.css` and `countable-nouns.js` provide the responsive styling and interactions. No installation or Internet is required.
 
+## Quantity studio: Partitives & quantifiers
+
+`partitives-quantifiers.html` contiene 20 diapositivas en inglés (A2–B1), notas docentes en español y una ruta sugerida de 60–75 minutos. Se abre desde Quantifiers en la barra principal, la portada temática y Noun lab. Incluye unidades y porciones, plurales, concordancia, some/any, much/many, a lot of/lots of, a few/a little/few/little, enough/plenty of, too much/too many y grupos específicos con of. Combina explicaciones, 14 preguntas con retroalimentación, reparación de oraciones, un picnic y una conversación de cafetería.
+
+Las respuestas y los textos abiertos se conservan al navegar y recargar mediante `localStorage`, con clave exclusiva `ingles-3-quantity-studio-v1`. Download my work descarga textos y progreso; no graba audio ni califica textos abiertos. Restart this lesson pide confirmación y borra únicamente el estado de esta lección. Admite `?slide=14` (índice desde cero), teclado fuera de controles y navegación móvil. Las notas docentes son visibles al compartir pantalla. Reutiliza `countable-nouns.css` y añade `partitives-quantifiers.css` y `partitives-quantifiers.js`. No requiere conexión para el contenido. Ejecuta `node ingles-3/check-quantities.cjs` para comprobar contenido e interacciones mediante un adaptador DOM; esta comprobación no sustituye una revisión visual en navegador.
+
 ## Diseño responsivo
 
 Las cuatro páginas adaptan columnas, títulos y controles a móvil, tableta y escritorio. La presentación usa la altura real de la cabecera, permite desplazar el contenido de las diapositivas y ofrece desplazamiento de página en ventanas de poca altura. La lección de sustantivos mantiene el índice con desplazamiento horizontal independiente en móvil. Los paneles, el temporizador y la pizarra conservan sus controles accesibles en pantallas pequeñas.
+
